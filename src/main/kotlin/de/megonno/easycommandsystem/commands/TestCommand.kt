@@ -9,7 +9,9 @@ class TestCommand : MCommand("test") {
 
     override fun complete(args: List<String>): List<List<String>> {
         return listOf(
-            listOf("1", "2", "3")
+            listOf("1", "2", "3"),
+            listOf("hello", "world"),
+            listOf()
         )
     }
 }
