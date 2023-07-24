@@ -1,5 +1,6 @@
 package de.megonno.easycommandsystem
 
+import de.megonno.easycommandsystem.commands.ExitCommand
 import de.megonno.easycommandsystem.commands.TestCommand
 import org.jline.reader.*
 import org.jline.terminal.TerminalBuilder
@@ -17,7 +18,7 @@ class MTerminal(private val prompt: String) : Runnable {
         .build()
     
     init {
-        command(TestCommand())
+        command(ExitCommand(this), TestCommand())
     }
     
     fun start() {
